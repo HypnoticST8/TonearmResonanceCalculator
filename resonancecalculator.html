@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Nosifer" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+    <script type="text/javascript" src="resonancecalculator.js"></script>
+</head>
+<body>
+<div class="container">
+    <div id="resonancegraph" style="width: 100%; height: 500px;"></div>
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="row panel panel-default">
+                <div class="col panel-body text-center">
+                    <div class="form-group">
+                        <label for="compilance">cartridge compliance</label>
+                        <div class="input-group">
+                            <input id="compilance" class="form-control text-center" type="text" placeholder="mN or dyn">
+                            <span class="input-group-addon">
+                                <input type="checkbox" id="100Hz"> @100 Hz</input>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-7">
+            <div class="row panel panel-default text-center">
+                <div class="col-sm-2 panel-body">
+                    <div class="form-group">
+                        <label for="cartridge_mass">cartridge</label>
+                        <input id="cartridge_mass" class="form-control text-center " type="text" placeholder="grams">
+                    </div>
+                </div>
+                <div class="col-sm-2 panel-body">
+                    <div class="form-group">
+                        <label for="headshell_mass">headshell</label>
+                        <input id="headshell_mass" class="form-control text-center" type="text" placeholder="grams">
+                    </div>
+                </div>
+                <div class="col-sm-2 panel-body">
+                    <div class="form-group">
+                        <label for="tonearm_mass">tonearm</label>
+                        <input id="tonearm_mass" class="form-control text-center" type="text" placeholder="grams">
+                    </div>
+                </div>
+                <div class="col-sm-2 panel-body">
+                    <div class="form-group">
+                        <label for="screws" class="nowrap">screws</label>
+                        <input id="screws_mass" class="form-control text-center" type="text" placeholder="grams">
+                    </div>
+                </div>
+                <div class="col-sm-2 panel-body">
+                    <div class="form-group">
+                        <label for="total_mass" class="nowrap">total mass</label>
+                        <input id="total_mass" class="form-control text-center input-disabled-lightgrey" type="text">
+                    </div>
+                </div>
+                <div class="col-sm-2 panel-body">
+                    <div class="form-group">
+                        <br/>
+                        <button id="calculate_button" type="button" class="btn btn-primary btn-block" >GO!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="row panel panel-default text-center">
+                <div class="col col-md-6">
+                    <div class="form-group panel-body">
+                        <label for="f_resonance" class="nowrap">f<sub>resonance</sub></label>
+                        <input id="f_resonance" class="form-control text-center input-disabled-lightgrey">
+                    </div>
+                </div>
+                <div class="col col-md-6">
+                    <div class="form-group panel-body">
+                        <label for="mass_10Hz" class="nowrap">mass<sub> 10 Hz</sub></label>
+                        <input id="mass_10Hz" class="form-control text-center input-disabled-lightgrey">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
